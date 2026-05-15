@@ -1,0 +1,25 @@
+{
+  "description": "Road area polygon (pixel coordinates, clockwise or counter-clockwise)",
+  "vertices": [
+    {
+      "x": 4,
+      "y": 409
+    },
+    {
+      "x": 435,
+      "y": 192
+    },
+    {
+      "x": 740,
+      "y": 204
+    },
+    {
+      "x": 1007,
+      "y": 708
+    },
+    {
+      "x": 6,
+      "y": 697
+    }
+  ]
+}

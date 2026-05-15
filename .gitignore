@@ -1,0 +1,35 @@
+# ── Python ────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+*.egg
+
+# ── YOLO Model Weights (download separately) ─────────────────────
+models/*.pt
+*.pt
+
+# ── Large / Generated Output Files ───────────────────────────────
+output/annotated_output.mp4
+output/track_history.pkl
+
+# ── Raw Video (too large for git) ────────────────────────────────
+Raw video/
+
+# ── Bin (old/unused files) ───────────────────────────────────────
+Bin/
+
+# ── IDE / OS ─────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+.DS_Store
+desktop.ini

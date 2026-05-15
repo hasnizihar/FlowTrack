@@ -1,0 +1,22 @@
+[
+  {
+    "id": "GCP-1",
+    "pixel_x": 752,
+    "pixel_y": 394
+  },
+  {
+    "id": "GCP-2",
+    "pixel_x": 513,
+    "pixel_y": 399
+  },
+  {
+    "id": "GCP-3",
+    "pixel_x": 584,
+    "pixel_y": 228
+  },
+  {
+    "id": "GCP-4",
+    "pixel_x": 690,
+    "pixel_y": 225
+  }
+]

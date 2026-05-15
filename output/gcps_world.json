@@ -1,0 +1,26 @@
+[
+  {
+    "id": "GCP-1",
+    "world_x": 12.25,
+    "world_y": 15.65,
+    "description": "Calculated from GPS reference point"
+  },
+  {
+    "id": "GCP-2",
+    "world_x": 5.8,
+    "world_y": 16.1,
+    "description": "Calculated from GPS reference point"
+  },
+  {
+    "id": "GCP-3",
+    "world_x": 6.76,
+    "world_y": 61.24,
+    "description": "Calculated from GPS reference point"
+  },
+  {
+    "id": "GCP-4",
+    "world_x": 13.44,
+    "world_y": 60.95,
+    "description": "Calculated from GPS reference point"
+  }
+]
