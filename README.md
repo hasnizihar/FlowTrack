@@ -64,7 +64,7 @@ A comprehensive, computer-vision-based traffic flow analysis tool powered by **Y
 
 You can download the pre-compiled Windows setup file to install FlowTrack without any Python configuration:
 
-**[Download FlowTrack Setup (.exe)](https://github.com/hasnizihar/Traffic-Analysis-Pipeline/releases/latest)**
+**[Download FlowTrack Setup (.exe)](https://github.com/hasnizihar/FlowTrack/releases/latest/download/FlowTrack_Setup.exe)**
 
 *Simply run the installer and launch FlowTrack from your desktop!*
 
