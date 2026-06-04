@@ -53,7 +53,7 @@ def compute_speeds(track_history, fps):
         speed_kmh_mean = speed_ms_mean * 3.6
 
         speed_records.append({
-            "track_id": tid,
+            "track_id": int(tid),
             "vehicle_type": data["type"],
             "lane": data["lane"],
             "speed_kmh": round(speed_kmh_median, 2),
@@ -76,6 +76,27 @@ def main():
         track_history = pickle.load(f)
     print(f"  Loaded {len(track_history)} tracks")
 
+    # Load counted vehicle IDs from vehicle_counts.csv (user request)
+    import os
+    counted_ids = set()
+    try:
+        counts_df = pd.read_csv(config.VEHICLE_COUNTS_CSV)
+        if "track_id" in counts_df.columns:
+            # Cast track IDs to floats first, then integers, and then to strings to handle float representation (like 3.0)
+            counted_ids = set(counts_df["track_id"].dropna().astype(float).astype(int).astype(str).unique())
+            print(f"  Loaded {len(counted_ids)} counted vehicle track IDs from vehicle_counts.csv")
+        else:
+            print("  [!] vehicle_counts.csv does not contain 'track_id' column!")
+    except FileNotFoundError:
+        print(f"  [!] Counts file not found: {config.VEHICLE_COUNTS_CSV}")
+
+    # Filter track history to only include those counted
+    if os.path.exists(config.VEHICLE_COUNTS_CSV):
+        filtered_track_history = {tid: val for tid, val in track_history.items() if str(tid) in counted_ids}
+        print(f"  Filtered track history to {len(filtered_track_history)} counted tracks")
+    else:
+        filtered_track_history = track_history
+
     # Get FPS from video
     cap = cv2.VideoCapture(config.VIDEO_PATH)
     fps = cap.get(cv2.CAP_PROP_FPS) or config.FALLBACK_FPS
@@ -84,12 +105,17 @@ def main():
 
     # Compute speeds
     print("\nComputing speeds...")
-    speed_records = compute_speeds(track_history, fps)
+    speed_records = compute_speeds(filtered_track_history, fps)
     speed_df = pd.DataFrame(speed_records)
 
+    # Always write the file, even if empty (so we don't keep stale speed data)
     if speed_df.empty:
-        print("\n[!] No speed data computed. Check your track history.")
-        return
+        # Create empty DataFrame with expected columns
+        speed_df = pd.DataFrame(columns=[
+            "track_id", "vehicle_type", "lane", "speed_kmh", 
+            "speed_kmh_mean", "num_positions", "num_speed_samples"
+        ])
+        print("\n[!] No speed data computed (no matching counted vehicles).")
 
     speed_df.to_csv(config.VEHICLE_SPEEDS_CSV, index=False)
 

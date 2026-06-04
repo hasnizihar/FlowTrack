@@ -15,8 +15,8 @@ models/*.pt
 *.pt
 
 # ── Large / Generated Output Files ───────────────────────────────
-output/annotated_output.mp4
-output/track_history.pkl
+output/*
+!output/.gitkeep
 
 # ── Raw Video (too large for git) ────────────────────────────────
 Raw video/

@@ -8,7 +8,7 @@ import os
 # --- Paths --------------------------------------------------------------------
 # BASE_DIR is the project root (parent of scripts/)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VIDEO_PATH = os.path.join(BASE_DIR, "Raw video", "TimeVideo_20260501_085748.mp4")
+VIDEO_PATH = os.path.join(BASE_DIR, "data", "Raw video", "TimeVideo_20260501_085748.mp4")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -53,7 +53,7 @@ LANE_BOUNDARY_M = LANE_1_WIDTH_M  # 9.0 m
 
 # --- YOLO Configuration ------------------------------------------------------
 MODELS_DIR = os.path.join(BASE_DIR, "models")
-YOLO_MODEL = os.path.join(MODELS_DIR, "yolov9t.pt")   # YOLOv9 tiny – fast on CPU, better architecture than v8
+YOLO_MODEL = os.path.join(MODELS_DIR, "yolov9t.pt")
 # YOLO_MODEL = os.path.join(MODELS_DIR, "yolov9c.pt")  # use this if u have GPU — better mAP for South-Asian traffic
 YOLO_CONFIDENCE = 0.25       # Minimum detection confidence
 

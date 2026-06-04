@@ -305,8 +305,10 @@ def main(write_video=True, max_frames=None):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
             video_writer.write(frame)
 
-        # Progress reporting
+        # Progress reporting (for GUI parsing)
         frame_no += 1
+        if frame_no % 50 == 0:
+            print(f"Frame {frame_no}/{total_frames}", flush=True)
         if frame_no % 500 == 0:
             elapsed = time.time() - start_time
             pct = frame_no / total_frames * 100
