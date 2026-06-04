@@ -30,5 +30,5 @@ exe = EXE(
     name=app_name,
     debug=False,
     console=False,       # no terminal window on Windows
-    icon=None,
+    icon="traffic_analysis_gui/assets/icon.ico",
 )

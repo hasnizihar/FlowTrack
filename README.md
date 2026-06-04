@@ -4,6 +4,7 @@
 ![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![YOLOv9](https://img.shields.io/badge/YOLO-v9-orange)
 ![PyQt6](https://img.shields.io/badge/GUI-PyQt6-green)
+[![Download Setup](https://img.shields.io/badge/Download-Windows_Installer-blueviolet?style=for-the-badge&logo=windows)](https://github.com/hasnizihar/Traffic-Analysis-Pipeline/releases/latest)
 
 A comprehensive, computer-vision-based traffic flow analysis tool powered by **YOLOv9** and **DeepSORT**. Developed by **HASNI ZIHAR** and designed for transportation engineering, this pipeline processes traffic surveillance video to automatically detect, classify, and track vehicles. It extracts vital traffic parameters—such as flow rates, speed distributions, and vehicle composition—and generates publication-quality charts.
 
@@ -59,7 +60,17 @@ A comprehensive, computer-vision-based traffic flow analysis tool powered by **Y
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the Repository
+### 📥 Option 1: Download Windows Installer (Recommended for Users)
+
+You can download the pre-compiled Windows setup file to install FlowTrack without any Python configuration:
+
+**[Download FlowTrack Setup (.exe)](https://github.com/hasnizihar/Traffic-Analysis-Pipeline/releases/latest)**
+
+*Simply run the installer and launch FlowTrack from your desktop!*
+
+### 💻 Option 2: Setup for Development (Python)
+
+#### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/hasnizihar/Traffic-Analysis-Pipeline.git
