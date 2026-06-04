@@ -262,12 +262,12 @@ class SettingsScreen(QWidget):
             form.addRow("PyQt6:", QLabel("Unknown"))
 
         form.addRow("Repository:", QLabel("github.com/hasnizihar/YOLOv9-Traffic-Analysis-Pipeline"))
-
-        open_repo = QPushButton("Open Repository")
-        open_repo.setObjectName("SecondaryBtn")
-        open_repo.clicked.connect(
+        repo_btn = QPushButton("Open GitHub")
+        repo_btn.setStyleSheet("padding: 5px 10px; background-color: #2D3748; border-radius: 4px;")
+        repo_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        repo_btn.clicked.connect(
             lambda: webbrowser.open("https://github.com/hasnizihar/YOLOv9-Traffic-Analysis-Pipeline"))
-        form.addRow("", open_repo)
+        form.addRow("", repo_btn)
 
     # ------------------------------------------------------------------ #
     #  Helpers                                                             #

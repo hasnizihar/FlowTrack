@@ -5,7 +5,7 @@
 ![YOLOv9](https://img.shields.io/badge/YOLO-v9-orange)
 ![PyQt6](https://img.shields.io/badge/GUI-PyQt6-green)
 
-A comprehensive, computer-vision-based traffic flow analysis tool powered by **YOLOv9** and **DeepSORT**. Designed for transportation engineering, this pipeline processes traffic surveillance video to automatically detect, classify, and track vehicles. It extracts vital traffic parameters—such as flow rates, speed distributions, and vehicle composition—and generates publication-quality charts.
+A comprehensive, computer-vision-based traffic flow analysis tool powered by **YOLOv9** and **DeepSORT**. Developed by **HASNI ZIHAR** and designed for transportation engineering, this pipeline processes traffic surveillance video to automatically detect, classify, and track vehicles. It extracts vital traffic parameters—such as flow rates, speed distributions, and vehicle composition—and generates publication-quality charts.
 
 ---
 
@@ -62,7 +62,7 @@ A comprehensive, computer-vision-based traffic flow analysis tool powered by **Y
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/Traffic-Analysis-Pipeline.git
+git clone https://github.com/hasnizihar/Traffic-Analysis-Pipeline.git
 cd Traffic-Analysis-Pipeline
 ```
 
